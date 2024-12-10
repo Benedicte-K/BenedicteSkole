@@ -7,7 +7,7 @@ import { print } from './lib/output.mjs';
 import { ANSI } from './lib/ansi.mjs';
 import { getRandomItemFromArray } from './lib/random.mjs';
 import language from './dictionary.mjs';
-import TITLE from './titlescreen.mjs';
+//import TITLE from './titlescreen.mjs';
 import GAME_DICTIONARY from './dictionary.mjs';
 
 const CHOICES = { rock: 1, paper: 2, scissors: 3 };
@@ -28,7 +28,7 @@ setTimeout(playGame, 3000);
 // print (ANSI.CLEAR_SCREEN)
 
 
-function playGame(){
+async function playGame(){
 
     print(language.title, ANSI.COLOR.RED);
 
@@ -44,6 +44,8 @@ if (answer.includes(language.confirm)){
     playGame();
 } else {
     process.exit();
+}
+
 }
 // ---- Game functions etc..
 
